@@ -3,6 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 export default {
     mode: 'production',
@@ -49,6 +50,11 @@ export default {
         new MiniCssExtractPlugin({
             filename: 'styles.[contenthash].css',
         }),
+        new CopyWebpackPlugin({
+          patterns: [
+            { from: "public/vite.svg", to: "vite.svg" }  // ✅ `favicon.ico`를 `dist/`로 복사
+          ]
+        })
     ],
     devServer: {
         historyApiFallback: true,
