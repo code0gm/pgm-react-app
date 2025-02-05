@@ -11,6 +11,13 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
+    "@date-io/date-fns": "^3.2.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/lab": "^6.0.0-beta.26",
+    "@mui/material": "^6.4.3",
+    "@mui/x-date-pickers": "^7.25.0",
+    "date-fns": "^2.22.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.5"
